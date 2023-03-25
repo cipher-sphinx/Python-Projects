@@ -73,18 +73,20 @@ while True:
     else:
         print("Invalid input")
 
-    repeat = input("Do you want to perform another calculation? (Y/N): ")
+
+
+    while True:
+
+        repeat = input("Do you want to perform another calculation? (Y/N): ")
+
+        if repeat.lower() not in ['n', 'y']:
+            print("Invalid Input")
+            continue
+        elif repeat.lower() == 'y':
+            break
+        elif repeat.lower() == 'n':
+            break
 
     if repeat.lower() == 'n':
+        print("Thank You")
         break
-    elif repeat.lower() == 'y':
-        continue
-    else:
-        while True:
-            invalid_choice = input("Invalid input. Do you want to quit? (Y/N): ")
-            if invalid_choice.lower() == 'n':
-                break
-            elif invalid_choice.lower() == 'y':
-                break
-            else:
-                continue
